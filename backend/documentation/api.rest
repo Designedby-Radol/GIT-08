@@ -1,0 +1,62 @@
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------
+            //USERS
+###
+GET  http://localhost:3000/user/getallusers
+
+###
+GET  http://localhost:3000/user/getByUsername/luiso
+
+###
+PUT http://localhost:3000/user/update/64f77884bbea4a0644dad8ae
+Content-Type:  application/json
+
+{
+    "username":"luiso",
+    "email":"hola@gmail.com",
+    "name":"luisa", 
+    "password":"pepe"
+}
+
+###
+POST http://localhost:3000/user/register
+Content-Type:  application/json
+
+{
+    "username":"luisa",
+    "email":"hola@gmail.com",
+    "name":"luisa",
+    "password":"pepe"
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------
+            //POKEMONS
+
+###
+POST http://localhost:3000/pokenom/register
+Content-Type:  application/json
+
+{
+    "name":"penesillo",
+    "species.Hola":"cualquiercosiHola"
+}
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------
+            //NEWS
+
+###
+POST http://localhost:3000/news/register
+Content-Type:  application/json
+
+{
+    "noticia":"hola"
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------
+            //FOROS
+
+###
+POST http://localhost:3000/foro/register
+Content-Type:  application/json
+
+{
+    "foro":"aca hay un foro"
+}
+
