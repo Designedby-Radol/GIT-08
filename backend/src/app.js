@@ -1,3 +1,5 @@
+require('dotenv').config()
+require('./db')
 //llamar las librerias
 const express = require(`express`)
 
