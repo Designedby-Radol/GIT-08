@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "o": "echo \"si los penes hablaran, el mio diria hola mundo\" && nodemon --exec node src/app.js"
+    "o": "echo \"si los peces hablaran, el mio diria hola mundo\" && nodemon --exec node src/app.js"
   },
   "author": "",
   "license": "ISC",

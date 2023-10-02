@@ -4,10 +4,7 @@ require('./db')
 const express = require(`express`)
 
 //rutas importadas
-const user = require(`./routes/user.js`)
-const pokenom = require(`./routes/pokenom.js`)
-const news = require(`./routes/news.js`)
-const foro = require(`./routes/foros.js`)
+const pelicula = require(`./routes/Peliculas.js`)
 
 //definir las funciones a utilizar
 const app = express()
@@ -22,10 +19,7 @@ require(`./db`)
 const port = 3000
 
 //definir rutas de usuario
-app.use(`/user`,user)
-app.use(`/pokenom`,pokenom)
-app.use(`/news`,news)
-app.use(`/foro`,foro)
+app.use(`/peliculas`,pelicula)
 
 //iniciar el servidor
 app.listen(port, ( ) => console.log(`server is running in port ${port}`))

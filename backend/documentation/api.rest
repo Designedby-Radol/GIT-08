@@ -1,23 +1,23 @@
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //USERS
+            //peliculas
 ###
-GET  http://localhost:3000/user/getallusers
+GET http://localhost:3000/user/getallusers
 
 ###
-GET  http://localhost:3000/user/getByUsername/luisa
+GET http://localhost:3000/user/getByUsername/luisa
 
 ###
-GET  http://localhost:3000/user/deleteUser/65175a9b01c4049b43a753bd
+GET http://localhost:3000/user/deleteUser/65175a9b01c4049b43a753bd
 
 ###
-PUT http://localhost:3000/user/update/65175a9b01c4049b43a753bd
+PUT http://localhost:3000/user/update/65175a9b01c4049b43a753bd 
 Content-Type:  application/json
 
 {
-    "username":"luisa",
-    "email":"hola@gmail.com",
-    "name":"luisa", 
-    "password":"pepe"
+"username":"luisa", 
+"email":"hola@gmail.com", 
+"name":"luisa", 
+"password":"pepe"
 }
 
 ###
@@ -25,41 +25,40 @@ POST http://localhost:3000/user/register
 Content-Type:  application/json
 
 {
-    "username":"joseph",
-    "email":"pla@gmail.com",
-    "name":"joseph",
-    "password":"papa"
+"username":"luisa", 
+"email":"hola@gmail.com", 
+"name":"luisa", 
+"password":"pepe"
 }
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //POKEMONS
+            //pokemon
 
 ###
 POST http://localhost:3000/pokenom/register
 Content-Type:  application/json
 
 {
-    "name":"penesillo",
-    "species.Hola":"cualquiercosiHola"
+    "name": "fight",
+    "lastname": "club",
+    "year": "1999",
+    "type": "accion",
 }
 
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //NEWS
+###
+GET http://localhost:3000/user/getallusers
+###
+GET http://localhost:3000/user/getByUsername/luisa
 
 ###
-POST http://localhost:3000/news/register
+GET http://localhost:3000/user/deleteUser/65175a9b01c4049b43a753bd
+
+###
+PUT http://localhost:3000/user/update/65175a9b01c4049b43a753bd 
 Content-Type:  application/json
 
 {
-    "noticia":"hola"
+    "name": "fight",
+    "lastname": "club",
+    "year": "1999",
+    "type": "accion",
 }
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //FOROS
-
-###
-POST http://localhost:3000/foro/register
-Content-Type:  application/json
-
-{
-    "foro":"aca hay un foro"
-}
-
