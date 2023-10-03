@@ -10,7 +10,7 @@ async function createPeli(request, response) {
         return response.status(400).json({ msg: "esta pelicula ya existe" });
     }
     //decirle que quiero crear un documento en la coleccion users
-    const newPeli = new PeliModel({
+    const newPeli = new PeliculaModel({
         name,
         lastname,
         year,
