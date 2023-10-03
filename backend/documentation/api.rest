@@ -38,26 +38,26 @@ POST http://localhost:3000/peliculas/register
 Content-Type:  application/json
 
 {
-    "name": "fight",
-    "lastname": "club",
-    "year": "1999",
+    "name": "maze runner",
+    "lastname": "correr o morir",
+    "year": "2014",
     "type": "accion"
 }
 ###
-GET http://localhost:3000/peliculas/getallpeli
+GET http://localhost:3000/peliculas/getallpelis
 ###
-GET http://localhost:3000/peliculas/getByName/
+GET http://localhost:3000/peliculas/getByName/fight
 
 ###
-GET http://localhost:3000/peliculas/deletePeli/
+GET http://localhost:3000/peliculas/deletePeli/651b65782df2fd6f0c17d453
 
 ###
-PUT http://localhost:3000/peliculas/update/
+PUT http://localhost:3000/peliculas/update/651b65782df2fd6f0c17d453
 Content-Type:  application/json
 
 {
-    "name": "fight",
-    "lastname": "club",
-    "year": "1999",
+    "name": "fig",
+    "lastname": "clab",
+    "year": "1974",
     "type": "accion"
 }

@@ -32,7 +32,7 @@ async function updatePeli(request, response) {
         //body - request.body
         let data = request.body;
         //actualice el usuario
-        await PeliModel.findByIdAndUpdate(_id, data);
+        await PeliculaModel.findByIdAndUpdate(_id, data);
         return response.status(200).json({ msg: "Pelicula fue actualizada" });
     } catch (error) {
         return response.status(400).json({ msg: "Error", error });
@@ -42,7 +42,7 @@ async function updatePeli(request, response) {
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 async function getAllPelis(request, response) {
-    const data = await PeliModel.find()
+    const data = await PeliculaModel.find()
     response.status(200).json({ data })
 }
 
@@ -51,8 +51,8 @@ async function getAllPelis(request, response) {
 async function getByName(request, response) {
     try {
         const { name } = request.params;
-        const pelicula = await PeliModel.findOne({ name });
-        return response.status(200).json({ pelicula });
+        const pelicula = await PeliculaModel.findOne( name );
+        return response.status(200).json( pelicula );
     } catch (error) {
         return response.status(400).json({ msg: "Error", error });
     }
@@ -65,7 +65,7 @@ async function deletePeli(request, response) {
         let { _id } = request.params;
 
         //elimine el usuario
-        await peliModel.findByIdAndRemove(_id);
+        await PeliculaModel.findByIdAndRemove(_id);
 
         return response.status(200).json({ msg: "la pelicula eliminado" });
     } catch (error) {
