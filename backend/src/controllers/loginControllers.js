@@ -1,8 +1,9 @@
-const UserModel = require('../models/user.model')
+const LoginModel = require('../models/login.model')
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 async function createUser(request, response) {
     //extraer la data del body
     let { username, email, name, lastname, password } = request.body;
+    const hashPassword = await bcrypt.hash(password, 10);
     // revisar si en la base de datos se encuentran registros con el username o el email
     const data = await UserModel.find({ $or: [{ email }, { username }] });
     // condicionar si se va a crear o si va a mostrar un mensaje de que yta existe - [] - null

@@ -20,6 +20,7 @@ const port = 3000
 
 //definir rutas de usuario
 app.use(`/peliculas`,pelicula)
+app.use(`/login`,login)
 
 //iniciar el servidor
 app.listen(port, ( ) => console.log(`server is running in port ${port}`))
