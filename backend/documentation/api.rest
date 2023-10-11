@@ -1,36 +1,4 @@
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //users
-###
-GET http://localhost:3000/user/getallusers
-
-###
-GET http://localhost:3000/user/getByUsername/luisa
-
-###
-GET http://localhost:3000/user/deleteUser/65175a9b01c4049b43a753bd
-
-###
-PUT http://localhost:3000/user/update/65175a9b01c4049b43a753bd 
-Content-Type:  application/json
-
-{
-"username":"luisa", 
-"email":"hola@gmail.com", 
-"name":"luisa", 
-"password":"pepe"
-}
-
-###
-POST http://localhost:3000/user/register
-Content-Type:  application/json
-
-{
-"username":"luisa", 
-"email":"hola@gmail.com", 
-"name":"luisa", 
-"password":"pepe"
-}
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------
             //peliculas
 
 ###
@@ -38,8 +6,7 @@ POST http://localhost:3000/peliculas/register
 Content-Type:  application/json
 
 {
-    "name": "forest",
-    "lastname": "gump",
+    "name": "forest gump",
     "year": "1995",
     "type": "drama"
 }
@@ -56,8 +23,7 @@ PUT http://localhost:3000/peliculas/update/651b8245594d7781c59efeda
 Content-Type:  application/json
 
 {
-    "name": "Forest",
-    "lastname": "gump",
+    "name": "Forest gump",
     "year": "1995",
     "type": "terror"
 }

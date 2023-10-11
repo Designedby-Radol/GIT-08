@@ -2,9 +2,9 @@ const PeliculaModel = require('../models/Pelicula.model')
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 async function createPeli(request, response) {
     //extraer la data del body
-    let { name, lastname, year, type } = request.body;
+    let { name ,year ,type } = request.body;
     // revisar si en la base de datos se encuentran registros con el username o el email
-    const data = await PeliculaModel.find({ $or: [{ lastname }, { name}] });
+    const data = await PeliculaModel.find({ $or: [{name}] });
     // condicionar si se va a crear o si va a mostrar un mensaje de que yta existe - [] - null
     if (data && data.length !== 0) {
         return response.status(400).json({ msg: "esta pelicula ya existe" });
@@ -12,7 +12,6 @@ async function createPeli(request, response) {
     //decirle que quiero crear un documento en la coleccion users
     const newPeli = new PeliculaModel({
         name,
-        lastname,
         year,
         type
     });

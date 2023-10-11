@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 
 const peliSchema = new mongoose.Schema({
     name: {type: String, require: true},
-    lastname: String,
     year: {type: Number, require: true},
     type: {type: String, require: true}
 }) 
