@@ -9,13 +9,7 @@ import { HomeService } from "../../services/home.service";
 })
 export class HomeComponent {
   constructor(public homeservice: HomeService){}
-  data= {
-    name:'',
-    year:'',
-    type:''
-  }
-
   addPelicula(form: NgForm){
-    console.log(form.value)
+    this.homeservice.createPelicula(form.value)
   };
 }

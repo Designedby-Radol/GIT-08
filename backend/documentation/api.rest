@@ -6,9 +6,9 @@ POST http://localhost:3000/peliculas/register
 Content-Type:  application/json
 
 {
-    "name": "forest gump",
-    "year": "1995",
-    "type": "drama"
+    "name": "",
+    "year": "",
+    "type": ""
 }
 ###
 GET http://localhost:3000/peliculas/getallpelis
@@ -19,7 +19,7 @@ GET http://localhost:3000/peliculas/getByName/forest
 GET http://localhost:3000/peliculas/deletePeli/651b8245594d7781c59efeda
 
 ###
-PUT http://localhost:3000/peliculas/update/651b8245594d7781c59efeda
+PUT http://localhost:3000/peliculas/update/651b839dca4836b1f04c3531
 Content-Type:  application/json
 
 {
