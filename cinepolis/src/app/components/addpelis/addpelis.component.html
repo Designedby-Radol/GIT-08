@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agregar PELICULAS</title>
+    <link rel="stylesheet" href="addpelis.component.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style> </style>
+</head>
+
+<body>
+    <!-- Sección 1 (Header) -->
+    <div class="seccion1 row justify-content-center align-items-center">
+        <div class="form-box ">
+            <div class="container">
+                <h1 class="text-center mb-4">Formulario de Películas</h1>
+                <form >
+                    <div class="form-group">
+                        <label for="nombre">Nombre de la Película:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre" name="name"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="año">Año de la Película:</label>
+                        <input type="number" class="form-control" id="año" placeholder="Ingrese el año" name="year"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="genero">Género de la Película:</label>
+                        <select class="form-control" id="genero" name="type" >
+                            <option value="">Seleccione un género</option>
+                            <option value="Acción">Acción</option>
+                            <option value="Comedia">Comedia</option>
+                            <option value="Drama">Drama</option>    
+                            <option value="Ciencia Ficción">Ciencia Ficción</option>
+                            <!-- <input type="string" class="form-control" id="genero" placeholder="Ingrese el genero" name="type"
+                            [(ngModel)]="homeservice.selectedPelicula.type" /> -->
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

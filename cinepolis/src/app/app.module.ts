@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TopComponent } from './components/estrcutura/top/top.component';
 import { BottomComponent } from './components/estrcutura/bottom/bottom.component';
+import { AddpelisComponent } from './components/addpelis/addpelis.component';
+import { SeePelisComponent } from './components/see-pelis/see-pelis.component';
+import { RecomendationsComponent } from './components/recomendations/recomendations.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TopComponent,
-    BottomComponent
+    BottomComponent,
+    AddpelisComponent,
+    SeePelisComponent,
+    RecomendationsComponent
   ],
   imports: [
     BrowserModule,

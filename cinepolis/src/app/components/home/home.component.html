@@ -1,30 +1,62 @@
----<main class="container">
-    <div class="container">
-        <h1 class="text-center mb-4">Formulario de Películas</h1>
-        <form #taskForm="ngForm" (ngSubmit)="addPelicula(taskForm)">
-            <div class="form-group">
-                <label for="nombre">Nombre de la Película:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre" name="name"
-                    [(ngModel)]="homeservice.selectedPelicula.name" />
-            </div>
-            <div class="form-group">
-                <label for="año">Año de la Película:</label>
-                <input type="number" class="form-control" id="año" placeholder="Ingrese el año" name="year"
-                    [(ngModel)]="homeservice.selectedPelicula.year" />
-            </div>
-            <div class="form-group">
-                <label for="genero">Género de la Película:</label>
-                <select class="form-control" id="genero" name="type" [(ngModel)]="homeservice.selectedPelicula.type">
-                    <option value="">Seleccione un género</option>
-                    <option value="Acción">Acción</option>
-                    <option value="Comedia">Comedia</option>
-                    <option value="Drama">Drama</option>    
-                    <option value="Ciencia Ficción">Ciencia Ficción</option>
-                    <!-- <input type="string" class="form-control" id="genero" placeholder="Ingrese el genero" name="type"
-                    [(ngModel)]="homeservice.selectedPelicula.type" /> -->
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Principal</title>
+    <link rel="stylesheet" href="home.component.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style> </style>
+</head>
+
+<body>
+
+    <!-- Sección 1 (Header) -->
+    <div class="seccion1 row justify-content-center align-items-center">
+        <div class="form-box col-md-10">
+            <h1>LISTA DE PELICULAS</h1>
+            <!-- Agrega aquí lo que necesites dentro de la tarjeta -->
+        </div>
     </div>
-</main>
+
+    <!-- Sección 2 -->
+    <div class="seccion2 row justify-content-center mt-5">
+        <div class="tarjeta col-md-10 d-flex text-center justify-content-between align-items-center">
+            <!-- Agrega aquí lo que necesites dentro de la tarjeta de la segunda sección -->
+
+            <div class="col-md-4" routerLink="/addpelis">
+                <div class="card">
+                    <div class="card-body">
+                        <a class="card-title" >AGREGAR UNA PELICULA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 b" routerLink="/seepelis">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Opción 1</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4"routerLink="/recomendations">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Opción 1</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Agrega aquí lo que necesites dentro de la tarjeta de la segunda sección -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Opcional, para ciertas funcionalidades de Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
