@@ -1,0 +1,15 @@
+
+.container {
+    background-color: black;
+    height: 100%; /* Esto asegura que la altura del contenido se expanda */
+    color: white;
+}
+.card{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    color: white;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../docs/descarga.jpg");
+}
+

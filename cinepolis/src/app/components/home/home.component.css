@@ -31,15 +31,19 @@ body {
 }
 
 .tarjeta {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../docs/descarga.jpg");
+    background-size: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../docs/bg4.jpg");
     padding: 20px;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
-    width: 90rem;
-    height: 658px;
+    width: 441px;
+    height: 735px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .seccion2 {
+    background-color: #000000;
     height: 100vh;
     /* Cambiar 'imagen2.jpg' por tu imagen de fondo */
     background-size: cover;
@@ -49,6 +53,7 @@ body {
     justify-content: center;
     color: white;
     text-align: center;
+    
 }
 
 
@@ -61,5 +66,6 @@ body {
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
+    color: white;
     align-items: center;
 }
