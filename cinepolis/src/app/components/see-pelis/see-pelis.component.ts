@@ -17,4 +17,14 @@ export class SeePelisComponent {
   getAllPeliculas(){
     this.homeservice.readPelicula()
   }
+
+  removePelicula(id: string | any){
+    this.homeservice.deletePelicula(id).subscribe((res) => {
+      this.getAllPeliculas()
+    }, (err) => {
+      console.log("err: ", err)
+    }) 
+  }
+  // editPelicula(pelicula: ){}
 }
+

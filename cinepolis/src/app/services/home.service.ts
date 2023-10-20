@@ -13,6 +13,7 @@ export class HomeService {
   peliculas: Pelicula[] = []
   urlBackendCreate = 'http://localhost:3000/peliculas/register'
   urlBackendGET = 'http://localhost:3000/peliculas/getallpelis'
+  urlBackendRemove = 'http://localhost:3000/peliculas/deletePeli'
 
   selectedPelicula: Pelicula = {
     name: "",
@@ -36,6 +37,7 @@ export class HomeService {
   }
   updatePelicula() {
   }
-  deletePelicula() {
+  deletePelicula(id: string) {
+    return this.http.delete(`${this.urlBackendRemove}/${id}`)
   }
 }

@@ -17,7 +17,7 @@ GET http://localhost:3000/peliculas/getallpelis
 GET http://localhost:3000/peliculas/getByName/nope
 
 ###
-GET http://localhost:3000/peliculas/deletePeli/66530f04c75e2bad1fbbdb04f
+DELETE http://localhost:3000/peliculas/deletePeli/65291efe9cc37f22a8dce93a
 
 ###
 PUT http://localhost:3000/peliculas/update/651b839dca4836b1f04c3531
