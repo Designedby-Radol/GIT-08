@@ -50,8 +50,8 @@ async function getAllPelis(request, response) {
 async function getByName(request, response) {
     try {
         const { name } = request.params;
-        const pelicula = await PeliculaModel.findOne( name );
-        return response.status(200).json( pelicula );
+        const pelicula = await PeliculaModel.findOne( { name } );
+        return response.status(200).json( { pelicula });
     } catch (error) {
         return response.status(400).json({ msg: "Error", error });
     }

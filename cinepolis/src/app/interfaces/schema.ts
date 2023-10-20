@@ -6,6 +6,7 @@ export class Pelicula {
         this.type = type
     } 
     _id?: string
+    seen?: boolean
     name: string
     year: number
     type: string

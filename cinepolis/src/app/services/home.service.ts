@@ -11,7 +11,8 @@ export class HomeService {
 
   }
   peliculas: Pelicula[] = []
-  urlBackend = 'http://localhost:3000/peliculas/register'
+  urlBackendCreate = 'http://localhost:3000/peliculas/register'
+  urlBackendGET = 'http://localhost:3000/peliculas/getallpelis'
 
   selectedPelicula: Pelicula = {
     name: "",
@@ -20,13 +21,18 @@ export class HomeService {
   }
 
   createPelicula(pelicula: Pelicula) {
-    return this.http.post(this.urlBackend, pelicula).subscribe((res) => {
+    return this.http.post(this.urlBackendCreate, pelicula).subscribe((res) => {
       console.log("res: ", res)
     }, (err) => {
       console.log("res: ", err)
     })
   }
   readPelicula() {
+    return this.http.get<any>(this.urlBackendGET).subscribe((res) => {
+      this.peliculas = res.data
+    }, (err) => {
+      console.log("res: ", err)
+    })
   }
   updatePelicula() {
   }

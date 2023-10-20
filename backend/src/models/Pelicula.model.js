@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
 const peliSchema = new mongoose.Schema({
-    name: {type: String, require: true},
-    year: {type: Number, require: true},
-    type: {type: String, require: true}
+    name: String,
+    year: Number,
+    type: String
 }) 
 
-const Peli= mongoose.model('peli',peliSchema)
+const PeliculaModel= mongoose.model('pelis',peliSchema)
 
-module.exports = Peli
+module.exports = PeliculaModel
