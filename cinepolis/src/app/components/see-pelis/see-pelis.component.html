@@ -1,0 +1,30 @@
+<div class="titulo">
+    <div class="row mt-5 d-flex justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center ">
+            <h1>Peliculas Guardadas</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <!--lista d objetos  -->
+    <ul class="list-unstyled" *ngFor="let pelicula of homeservice.peliculas">
+        <li class="row mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ pelicula.name }}</h5>
+                    <h6 class="card-subtitle mb-2">{{ pelicula.year }}</h6>
+                    <h6 class="card-text">{{ pelicula.type }}</h6>
+                    <button type="button" class="btn btn-dark" (click)="removePelicula(pelicula._id)">eliminar</button>
+                    <div class="form-check float-right">
+                        <input class="form-check-input" type="checkbox" id="miCheckbox" />
+                        <!-- (click)="removePelicula(pelicula._id)" -->
+                        <label class="form-check-label" for="miCheckbox"></label>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--  -->

@@ -1,5 +1,6 @@
 require('dotenv').config()
 require('./db')
+
 //llamar las librerias
 const express = require(`express`)
 
@@ -12,6 +13,8 @@ const app = express()
 //debe entender json
 app.use(express.json())
 
+const cors = require("cors")
+app.use(cors())
 //lamar a db
 require(`./db`)
 
@@ -19,7 +22,7 @@ require(`./db`)
 const port = 3000
 
 //definir rutas de usuario
-app.use(`/peliculas`,pelicula)
+app.use(`/peliculas`, pelicula)
 
 //iniciar el servidor
-app.listen(port, ( ) => console.log(`server is running in port ${port}`))
+app.listen(port, () => console.log(`server is running in port ${port}`))
