@@ -6,9 +6,9 @@ POST http://localhost:3000/peliculas/register
 Content-Type:  application/json
 
 {
-    "name": "",
-    "year": "",
-    "type": ""
+    "name": "Forest gump",
+    "year": "1995",
+    "type": "terror"
 }
 ###
 GET http://localhost:3000/peliculas/getallpelis
@@ -27,4 +27,3 @@ Content-Type:  application/json
     "name": "Forest gump",
     "year": "1995",
     "type": "terror"
-}
